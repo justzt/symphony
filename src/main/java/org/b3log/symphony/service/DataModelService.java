@@ -34,11 +34,15 @@ import org.b3log.symphony.cache.DomainCache;
 import org.b3log.symphony.model.*;
 import org.b3log.symphony.util.Sessions;
 import org.b3log.symphony.util.Symphonys;
+import org.b3log.symphony.util.URLs;
 import org.json.JSONObject;
 
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.util.*;
+import java.util.concurrent.Executors;
+import java.util.concurrent.ScheduledExecutorService;
+import java.util.concurrent.TimeUnit;
 
 /**
  * Data model service.
@@ -126,6 +130,7 @@ public class DataModelService {
      */
     @Inject
     private DomainCache domainCache;
+
 
     /**
      * Fills relevant articles.
@@ -530,7 +535,10 @@ public class DataModelService {
      * @throws Exception exception
      */
     private void fillNewTags(final Map<String, Object> dataModel) throws Exception {
-        dataModel.put(Common.NEW_TAGS, tagQueryService.getNewTags());
+        List list = tagQueryService.getNewTags();
+
+        dataModel.put(Common.NEW_TAGS, list);
+
     }
 
     /**

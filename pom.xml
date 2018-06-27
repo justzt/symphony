@@ -418,7 +418,7 @@
 
         </plugins>
 
-        <finalName>symphony</finalName>
+        <finalName>ROOT</finalName>
     </build>
 
     <profiles>

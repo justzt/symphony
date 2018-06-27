@@ -17,10 +17,10 @@
     along with this program.  If not, see <https://www.gnu.org/licenses/>.
 
 -->
-<div class="nav">
+<div class="nav" style="background-color: #ff571a">
     <h1 aria-label="${symphonyLabel}" class="tooltipped tooltipped-s">
         <a href="${servePath}">
-            <svg><use xlink:href="#logo"></use></svg>
+            <img src="${staticServePath}/images/bbs.png" style="width: 35px;height: 35px;margin-top: 7px;">
         </a>
     </h1>
     <div class="nav-tabs">

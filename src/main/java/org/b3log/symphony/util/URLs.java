@@ -58,4 +58,13 @@ public final class URLs {
      */
     private URLs() {
     }
+
+    /**
+     * 替换掉latke默认的domain，port
+     * @return
+     */
+    public static String domain(){
+        return "http://bbs.dasouche.net";
+    }
+
 }

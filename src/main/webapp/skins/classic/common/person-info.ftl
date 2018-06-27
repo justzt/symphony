@@ -48,24 +48,24 @@
             </li>
         </ul>
 
-        <div class="fn-clear">
-            <span>♠</span> <a href="${servePath}/top/balance">${wealthRankLabel}</a>
-            <span class="ft-red">♥</span> <a href="${servePath}/top/consumption">${consumptionRankLabel}</a>
+        <#--<div class="fn-clear">-->
+            <#--<span>♠</span> <a href="${servePath}/top/balance">${wealthRankLabel}</a>-->
+            <#--<span class="ft-red">♥</span> <a href="${servePath}/top/consumption">${consumptionRankLabel}</a>-->
 
-            <div class="fn-right">
-                <#if !isDailyCheckin>
-                    <a class="ft-gray" href="<#if useCaptchaCheckin>${servePath}/activity/checkin<#else>${servePath}/activity/daily-checkin</#if>">${dailyCheckinLabel}</a>
-                <#else>
-                    <a class="tooltipped tooltipped-w ft-fade" aria-label="${checkinStreakLabel}/${checkinStreakPart0Label}" href="${servePath}/top/checkin">
-                    ${currentUser.userCurrentCheckinStreak}/<span class="ft-gray">${currentUser.userLongestCheckinStreak}</span>
-                    </a>
-                </#if>
+            <#--<div class="fn-right">-->
+                <#--<#if !isDailyCheckin>-->
+                    <#--<a class="ft-gray" href="<#if useCaptchaCheckin>${servePath}/activity/checkin<#else>${servePath}/activity/daily-checkin</#if>">${dailyCheckinLabel}</a>-->
+                <#--<#else>-->
+                    <#--<a class="tooltipped tooltipped-w ft-fade" aria-label="${checkinStreakLabel}/${checkinStreakPart0Label}" href="${servePath}/top/checkin">-->
+                    <#--${currentUser.userCurrentCheckinStreak}/<span class="ft-gray">${currentUser.userLongestCheckinStreak}</span>-->
+                    <#--</a>-->
+                <#--</#if>-->
 
-                <a href="${servePath}/member/${currentUser.userName}/points" class="tooltipped tooltipped-w ft-fade"
-                   aria-label="${pointLabel} ${currentUser.userPoint?c}">
-                    <#if 0 == currentUser.userAppRole>0x${currentUser.userPointHex}<#else><div class="painter-point" style="background-color: #${currentUser.userPointCC}"></div></#if></a>
-            </div>
-        </div>
+                <#--<a href="${servePath}/member/${currentUser.userName}/points" class="tooltipped tooltipped-w ft-fade"-->
+                   <#--aria-label="${pointLabel} ${currentUser.userPoint?c}">-->
+                    <#--<#if 0 == currentUser.userAppRole>0x${currentUser.userPointHex}<#else><div class="painter-point" style="background-color: #${currentUser.userPointCC}"></div></#if></a>-->
+            <#--</div>-->
+        <#--</div>-->
     </div> 
     <div class="top-left activity-board"></div>
     <div class="top-right activity-board"></div>
